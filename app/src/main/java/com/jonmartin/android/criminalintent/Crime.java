@@ -3,10 +3,6 @@ package com.jonmartin.android.criminalintent;
 import java.util.Date;
 import java.util.UUID;
 
-/**
- * Created by martinjo on 2/12/2018.
- */
-
 public class Crime {
 
     private UUID mID;
