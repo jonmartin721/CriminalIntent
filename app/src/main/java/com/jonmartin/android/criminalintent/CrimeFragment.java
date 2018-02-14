@@ -17,9 +17,6 @@ import android.widget.EditText;
 public class CrimeFragment extends android.support.v4.app.Fragment {
 
     private Crime mCrime;
-    private EditText mTitleField;
-    private Button mDateButton;
-    private CheckBox mSolvedCheckBox;
 
 
     @Override
@@ -35,8 +32,8 @@ public class CrimeFragment extends android.support.v4.app.Fragment {
         View v = inflater.inflate(R.layout.fragment_crime, container, false);
 
         //Check Box
-        mSolvedCheckBox = v.findViewById(R.id.crime_solved);
-        mSolvedCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        CheckBox solvedCheckBox = v.findViewById(R.id.crime_solved);
+        solvedCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 mCrime.setSolved(isChecked);
@@ -44,8 +41,8 @@ public class CrimeFragment extends android.support.v4.app.Fragment {
         });
 
         //Title Field
-        mTitleField = v.findViewById(R.id.crime_title);
-        mTitleField.addTextChangedListener(new TextWatcher() {
+        EditText titleField = v.findViewById(R.id.crime_title);
+        titleField.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -64,9 +61,9 @@ public class CrimeFragment extends android.support.v4.app.Fragment {
         });
 
         //Date Button
-        mDateButton = v.findViewById(R.id.crime_date);
-        mDateButton.setText(mCrime.getDate().toString());
-        mDateButton.setEnabled(false);
+        Button dateButton = v.findViewById(R.id.crime_date);
+        dateButton.setText(mCrime.getDate().toString());
+        dateButton.setEnabled(false);
         return v;
     }
 }

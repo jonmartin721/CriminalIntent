@@ -3,9 +3,9 @@ package com.jonmartin.android.criminalintent;
 import java.util.Date;
 import java.util.UUID;
 
-public class Crime {
+class Crime {
 
-    private UUID mID;
+    private final UUID mID;
     private String mTitle;
     private Date mDate;
     private boolean mSolved;
