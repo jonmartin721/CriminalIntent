@@ -25,10 +25,12 @@ public class CrimeLab {
         for (int i = 0; i < 100; i++) {
             Crime crime = new Crime();
             crime.setTitle("Crime # " + i);
-            crime.setSolved(i % 2 == 0); //every other one will be marked solved
+            crime.setSolved(i % 2 == 0);            //every other one will be marked solved
+            crime.setRequiresPolice(i % 2 == 0);    //every other one will require police
             mCrimes.add(crime);
         }
     }
+
 
     //returns the list of crimes
     List<Crime> getmCrimes() {

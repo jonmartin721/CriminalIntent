@@ -78,7 +78,10 @@ public class CrimeListFragment extends Fragment {
 
         CrimeAdapter(List<Crime> crimes) {
             mCrimes = crimes;
+
         }
+
+
 
         @Override
         public CrimeHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -106,6 +109,7 @@ public class CrimeListFragment extends Fragment {
         List<Crime> crimes = crimeLab.getmCrimes();
 
         CrimeAdapter adapter = new CrimeAdapter(crimes);
+        //adapter.getItemViewType()
         mCrimeRecyclerView.setAdapter(adapter);
     }
 

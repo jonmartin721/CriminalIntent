@@ -10,15 +10,17 @@ class Crime {
     private String mTitle;
     private Date mDate;
     private boolean mSolved;
+    private boolean mRequiresPolice;
 
 
     //constructor
-    public Crime() {
+    Crime() {
         mID = UUID.randomUUID();
         mDate = new Date();
+
     }
 
-    public UUID getID() {
+    UUID getID() {
         return mID;
     }
 
@@ -31,7 +33,7 @@ class Crime {
         mTitle = title;
     }
 
-    public Date getDate() {
+    Date getDate() {
         return mDate;
     }
 
@@ -43,7 +45,15 @@ class Crime {
         return mSolved;
     }
 
-    public void setSolved(boolean solved) {
+    void setSolved(boolean solved) {
         mSolved = solved;
+    }
+
+    public boolean isRequiresPolice() {
+        return mRequiresPolice;
+    }
+
+    void setRequiresPolice(boolean requiresPolice) {
+        mRequiresPolice = requiresPolice;
     }
 }
