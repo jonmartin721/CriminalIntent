@@ -3,6 +3,7 @@ package com.jonmartin.android.criminalintent;
 import java.util.Date;
 import java.util.UUID;
 
+//this is the crime class that has data on each crime
 class Crime {
 
     private final UUID mID;

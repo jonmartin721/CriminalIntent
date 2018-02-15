@@ -2,10 +2,8 @@ package com.jonmartin.android.criminalintent;
 
 
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
+//this is the activity that hosts the crime detail fragment
 public class CrimeActivity extends SingleFragmentActivity {
 
     @Override
