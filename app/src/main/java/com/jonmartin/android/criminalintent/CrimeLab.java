@@ -10,9 +10,9 @@ public class CrimeLab {
 
     //variables
     private static CrimeLab sCrimeLab;
-    private List<Crime> mCrimes;
+    private final List<Crime> mCrimes;
 
-    public static CrimeLab get(Context context) {
+    static CrimeLab get(Context context) {
         if (sCrimeLab == null) {
             sCrimeLab = new CrimeLab(context);
         }
@@ -31,7 +31,7 @@ public class CrimeLab {
     }
 
     //returns the list of crimes
-    public List<Crime> getmCrimes() {
+    List<Crime> getmCrimes() {
         return mCrimes;
     }
 
